@@ -762,7 +762,7 @@ class Distribution_Function():
             raise ValueError('rtype must be {0}, not {1}'.format(rtypes, rtype))
 
         return f
-    #changed it myslef
+    
     def _reduce_E(self, dphi=None, dtheta=None):
         '''
         Calculate the reduced 1D distribution, f(E), by averaging
@@ -777,7 +777,7 @@ class Distribution_Function():
         '''
         # Assume theta and phi are equally sized/spaced bins
         if dphi is None:
-            dphi = np.diff(self.phi).mean()
+            dphi = np.diff(self.phi[0,:]).mean()
         if dtheta is None:
             dtheta = np.diff(self.theta[0,:]).mean()
 
