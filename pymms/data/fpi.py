@@ -779,7 +779,7 @@ class Distribution_Function():
         if dphi is None:
             dphi = np.diff(self.phi).mean()
         if dtheta is None:
-            dtheta = np.diff(self.theta).mean()
+            dtheta = np.diff(self.theta[0,:]).mean()
 
         # Weight for averaging reduced distribution
         #   - Volume of each cell = dv * v*dtheta * v*sin(theta)*dphi)
