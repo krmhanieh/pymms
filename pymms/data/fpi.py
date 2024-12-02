@@ -1035,7 +1035,7 @@ class Distribution_Function():
             fM = self.maxwellian(n=n, V=V, t=t)
         
         self.precondition()
-        fM.precondition
+        fM.precondition()
         
         # Assume that the azimuth and polar angle bins are equal size
         dtheta = np.diff(self._theta).mean()
